@@ -1,26 +1,11 @@
-This is a Python Flask App
+This is a Python Flask App written as part of a class project to create a visual recommendation service based on a public StackOverflow dataset. The web application uses [d3.js](https://d3js.org/) to generate user specific visualizations that serve as recommendations. At its core, we created several topic models based on the SO dataset and the recommendation service leverages this.
 
-All paths are linux paths, so it is ideal if the app is run on a linux environment.
+We used [Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) to perform topic modeling as provided by the [Gensim](https://radimrehurek.com/gensim/) package.
 
-Before running the following the installation of the following modules is required:
-pip install flask
-pip install flask-sqlalchemy
-pip install sqlalchemy-migrate
-pip install distance
+Python Dependencies: flask, flask-sqlalchemy, sqlalchemy-migrate, distance
 
-Once the above have been installed run: ./db_migrate
-
-That's it.
-
-WARMUP script
-SQLITE sometimes hangs the first couple of runs on a new system inspite of migration. To simplify this
-run the warmup script. If the script hasn't returned in 1 minute or so, force terminate (Ctrl-Z) the script
-and rerun. Once it returns a success message you may start the app.
-
-To app runner is present in run.py
+To run:
 ./run.py 
-to start the app. 
-Type localhost:8000/ on your browser
+Goto localhost:8000
 
-In case you want to vary the port, you can modify it within run.py
  
