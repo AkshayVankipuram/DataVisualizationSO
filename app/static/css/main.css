@@ -1,0 +1,28 @@
+body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    background: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+}
+
+p {
+    text-rendering: optimizeLegibility;
+}
+
+#radialDiv .arc,
+#radialDiv .label{
+    fill: rgb(36, 90, 48);    
+}
+

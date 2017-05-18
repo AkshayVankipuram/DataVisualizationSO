@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stack Exchange Java</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/radialProgress.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+        <script src="{{ url_for('static',filename='js/jquery-2.1.3.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/jquery-ui.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/d3.v3.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/queue.v1.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/colorbrewer.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/radialProgress.js') }}"></script>
+        <script type="text/javascript">
+            $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+            $STATIC = $SCRIPT_ROOT+'/static';
+            $RESOURCES = $STATIC+'/resources';
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

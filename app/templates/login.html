@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<style type="text/css">
+    #container {
+        position: absolute;
+        top: 35vh;
+        left: 42vw;
+        width: 16vw;
+        height: 10vh;
+        text-align: center;
+    }
+
+    #login {
+        width: 100%;
+        margin-top: 5%;
+        padding-bottom: 5px;
+        border: none;
+        border-bottom: 3px solid #a1a1a1;
+        text-align: center;
+        font-size: 1.7em;
+        color: #a1a1a1;
+    }
+
+    #login:focus {
+        outline: none;
+    }
+</style>
+<div id="container">
+    <img src="{{ url_for('static', filename='resources/so-icon.png') }}" width="106" height="106">
+    <input id="login" type="text" placeholder="username">
+</div>    
+<script type="text/javascript">
+    $(function() {
+        $('#login').focus()
+            .on('keypress', function(e) {
+                if(e.which == 13)
+                    window.location.href = $SCRIPT_ROOT+'/overview?user='+$(this).val();
+            });
+    });
+</script>
+{% endblock %}

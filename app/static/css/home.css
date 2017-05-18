@@ -1,0 +1,123 @@
+a {
+    text-decoration: none;
+}
+
+#chartContainer {
+    position: relative;
+    float: left;
+    width: 63%;
+}
+
+#panel {
+    position: relative;
+    width: 35%;
+    float: right; 
+    margin-right: 2%;
+    background: transparent;
+    text-align: center;
+}
+
+#panel #header {
+    margin-top: 20px;
+    font-size: larger;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: .6em;
+}
+
+#panel #header > p, #panel #header > #filters {
+    display: inline;
+    margin-left: 10%;
+}
+
+#panel #header > p > a {
+    float: right;
+    margin-right: 1%;
+}
+
+#panel #header > p {
+    margin: 0 auto;
+}
+
+#panel #header #filters {
+    float: right;
+    margin-right: 10px;
+}
+
+#viewer {
+    position: relative;
+    width: 98%;
+    height: 90vh;
+    margin: 0 auto;
+    text-align: left;
+    background: white;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.accHeader {
+    background: white;
+    margin-top: 0 !important;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.question, .answerElement {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.ui-state-focus {
+    outline: none;
+}
+
+.ui-state-active {
+    background: #f1f1f1;
+}
+
+.ui-widget-content {
+    border: none;
+}
+
+.ui-accordion-content {
+    background-color: #fafafa;
+}
+
+.ui-button-text {
+    font-size: small;
+}
+
+.accHeader > p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+path[id^="Topic"] {
+    fill: none;
+    opacity: 0.3;
+    stroke: #ccc;
+    stroke-width: 2.5px;
+}
+
+.Wselected {
+    background-color: lightgreen;
+}
+
+div[id^="slider"] {
+    border: 1.5px solid green;
+    border-radius: 6px;
+}
+
+.rect {
+    border: solid 1px white;
+    font: 10px sans-serif;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+}
+
+pre.prettyprint {
+    border: none;
+    background-color: #e1e1e1;
+}

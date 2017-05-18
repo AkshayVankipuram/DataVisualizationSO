@@ -1,0 +1,88 @@
+a {
+    text-decoration: none;
+}
+
+#panel {
+    position: relative;
+    float: right;
+    width: 40%;
+    margin-right: 5%;
+    background: white;
+    text-align: center !important;
+}
+
+#altpanel {
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 55vw;
+    width: 40vw;
+    height: 100vh;
+    opacity: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: -20;
+}
+
+#open, #close {
+    display: inline;
+    pointer-events: all;
+    cursor: pointer;
+    color: #609;
+}
+
+#sliders {
+    text-align: center;
+}
+
+.sliderD {
+    margin: 1em auto;
+    width: 80%;
+}
+
+.ui-slider-range {
+    background: green;
+}
+
+.header {
+    margin: 1em;
+    text-align: center;
+    font-size: larger;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: .6em;
+}
+
+#chartContainer {
+    position: relative;
+    float: left;
+    width: 55%;
+}
+
+#tagOverview, #topicOverview {
+    width: 100%;
+    height: 40vh;
+    border: none;
+}
+
+.chart {
+    position: relative;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.chart .axis text {
+    font-size: small;
+}
+
+.chart .axis path,
+.chart .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.node {
+    cursor: pointer;
+}
+

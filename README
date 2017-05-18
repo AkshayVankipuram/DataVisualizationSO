@@ -1,0 +1,44 @@
+This is a Python Flask App
+
+All paths are linux paths, so it is ideal if the app is run on a linux environment.
+But to run on windows run the following on bash on the app root directory
+
+sed -e "s/dvp\/bin\/python/.\\\dvp\\\bin\\\python/g" *.py
+
+Note: The virtualenv is called dvp here
+
+
+Before running the following the installation of the following modules is required:
+######################################################################################
+NOTE:
+We installed all the listed modules below into a python virtual environment called "dvp".
+This is a good way to ensure none of these modules affects your global python environment.
+The command is as follow: 
+virtualenv dvp
+If virtualenv is not available on your system then you may install it using pip or apt-get
+method 1: sudo pip install virtualenv
+method 2: sudo apt-get install python-virtualenv
+######################################################################################
+In the commands below we assume a virtualenv named "dvp" is setup. If not then use the global pip
+with sudo. (We recommend a virtualenv named "dvp"; its much cleaner and all the files point to it)
+dvp/bin/pip install flask
+dvp/bin/pip install flask-sqlalchemy
+dvp/bin/pip install sqlalchemy-migrate
+dvp/bin/pip install distance
+
+Once the above have been installed run: ./db_migrate
+
+That's it.
+
+WARMUP script
+SQLITE sometimes hangs the first couple of runs on a new system inspite of migration. To simplify this
+run the warmup script. If the script hasn't returned in 1 minute or so, force terminate (Ctrl-Z) the script
+and rerun. Once it returns a success message you may start the app.
+
+To app runner is present in run.py
+./run.py 
+to start the app. 
+Type localhost:8000/ on your browser
+
+In case you want to vary the port, you can modify it within run.py
+ 

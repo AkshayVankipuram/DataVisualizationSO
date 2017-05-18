@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/prettify.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+<div id="chartContainer"></div>
+<div id="panel">
+    <div id="header">
+        <p>Questions&nbsp;<a href="/overview?user={{user}}">Back to overview</a></p>
+        <!--<div id="filters">
+            <input type="radio" name="radio" id="vote_filter" checked="checked"><label for="vote_filter">Votes</label>
+            <input type="radio" name="radio" id="reputation_filter"><label for="reputation_filter">Reputation</label>
+        </div>-->
+    </div>
+    <div id="viewer"></div>
+</div>
+<script src="{{ url_for('static', filename='js/prettify.js') }}"></script>
+<script src="{{ url_for('static', filename='js/spin.min.js') }}"></script>
+<script type="text/javascript">
+    $CLUSTER = {{ cluster }};
+    $TOPIC = '';
+    $('#filters').buttonset();
+</script>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
