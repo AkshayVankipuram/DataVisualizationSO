@@ -4,5 +4,5 @@ We used [Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Diric
 
 Python Dependencies: flask, flask-sqlalchemy, sqlalchemy-migrate, distance
 
-It is not a runnable state at the moment.
+It is not in a runnable state at the moment.
  
